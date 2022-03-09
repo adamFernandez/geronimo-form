@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 101vh;
+  background-color: #3a3a4f;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+fieldset,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+}
+
+.container {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 2px rgba(17, 14, 14, 0.919);
+  border-radius: 0.5em;
+  margin: 1em auto;
+  padding: 1.5em;
+  width: 90%;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.8em;
+  color: #26a9e0;
+}
+
+ul {
+  li {
+    margin-bottom: 0.9em;
+  }
+}
+
+// Form
+
+fieldset {
+  margin-bottom: 1em;
+  border: none;
+
+  label {
+    width: 100%;
+    font-size: 0.95em;
+    color: #4a4a55;
+    font-weight: 500;
+  }
+
+  .required {
+    font-size: 0.8em;
+    color: #4a4a55;
+  }
+
+  .error-message {
+    display: none;
+    font-size: 0.8em;
+    color: rgb(187, 17, 17);
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #bababa;
+    border-radius: 0.5em;
+
+    &::placeholder {
+      color: #a9a9a9;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    font-family: Roboto, sans-serif;
+    padding: 0.5em;
+    border: 1px solid #dddddd;
+    border-radius: 0.5em;
+
+    &::placeholder {
+      color: #a9a9a9;
+    }
+  }
+
+  .visible {
+    display: inline-block;
+  }
+
+  .hidden {
+    display: hidden;
+  }
+  .edited {
+    &:invalid {
+      box-shadow: 0 0 3px 2px rgb(163, 23, 23);
+    }
+
+    &:valid {
+      box-shadow: 0 0 3px 2px rgb(28, 182, 46);
+    }
+  }
+
+  :focus:invalid {
+    outline: none;
+  }
+  .success {
+    box-shadow: 0 0 3px 2px rgb(28, 182, 46);
+  }
+
+  .error {
+    box-shadow: 0 0 3px 2px rgb(163, 23, 23);
+  }
+}
+
+button {
+  font-size: 0.9em;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.7em 0;
+  border: none;
+  border-radius: 0.5em;
+  background-color: #27a9e1;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+// Breakpoints
+
+@media screen and (max-width: 600px) {
+  .container {
+    font-size: 0.9em;
+  }
+}

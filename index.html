@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/jquery-3.6.0.js"></script>
+  <script src="./js/validation.js"></script>
+  <title>GreronimoWeb Form</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h3>How to fill this form:</h3>
+      <ul>
+        <li>All required fields have been indicated.</li>
+        <li>Email format example: name@emailprovider.com</li>
+        <li>Phone number should only contain numbers.</li>
+        <li>Further help is containg within the fields</li>
+      </ul>
+    </div>
+    <div class="container">
+      <h3>GeronimoWeb Form</h3>
+      <form class="geronimo-form">
+        <fieldset>          
+          <label for="name">
+            Name
+            <span class="required">(required)</span>
+            <span class="error-message">Enter a real name.</span>
+            <input id="name" name="name" type="text" placeholder="Brenda Smith" required >
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="email">
+            Email
+            <span class="required">(required)</span>
+            <span class="error-message">The email entered is not valid</span>
+            <input id="email" name="email" type="email" placeholder="brenda.smith@myemailprovider.com" required >
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="phone">
+            Phone
+            <span class="error-message">Enter a real phone number</span>
+            <input id="phone" name="phone" type="tel" placeholder="" >
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="request">
+            Request
+            <span class="error-message"></span>
+            <textarea rows="4" id="request" name="request" placeholder="Write your request here"></textarea>
+          </label>
+        </fieldset>
+        <button class="geronimo-form-send">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
